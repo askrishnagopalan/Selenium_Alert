@@ -38,11 +38,17 @@ public class JavaScript_All_Three_PopUps {
 		System.out.println(RESULT4.getText());
 		driver.findElement(By.xpath("//button[.='Click for JS Prompt']")).click();
 		Thread.sleep(2000);
-		driver.switchTo().alert().sendKeys("Selenium");
-		Thread.sleep(4000);
-		driver.switchTo().alert().accept();
+		alert1.sendKeys("Selenium");
+		Thread.sleep(2000);
+		alert1.accept();
 		WebElement RESULT5=driver.findElement(By.id("result"));
 		System.out.println(RESULT5.getText());
+		driver.findElement(By.xpath("//button[.='Click for JS Prompt']")).click();
+		Thread.sleep(2000);
+		alert1.sendKeys("");
+		Thread.sleep(2000);
+		alert1.dismiss();
+		WebElement RESULT6=driver.findElement(By.id("result"));
+		System.out.println(RESULT6.getText());
 	}
-
 }
